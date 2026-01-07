@@ -1,18 +1,6 @@
-function consecutiveSubstrings(string) {
-  // type your code here
-}
+const consecutiveSubstrings = require('./solution.js');
 
-if (require.main === module) {
-  // add your own tests in here
-  console.log("Expecting: ['a', 'ab', 'abc', 'b', 'bc', 'c']");
-  console.log("=>", consecutiveSubstrings('abc'));
-
-  console.log("");
-
-  console.log("Expecting: ['a']");
-  console.log("=>", consecutiveSubstrings('a'));
-}
-
-module.exports = consecutiveSubstrings;
-
-
+console.log("Test 1 (abc):", consecutiveSubstrings('abc'));
+console.log("Test 2 (a):", consecutiveSubstrings('a'));
+console.log("Test 3 (empty):", consecutiveSubstrings(''));
+console.log("Test 4 (ab):", consecutiveSubstrings('ab'));

@@ -1,2 +1,34 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+cat > solution.js << 'EOF'
+function getAllConsecutiveSubstrings(str) {
+    let substrings = [];
+    
+    for (let i = 0; i < str.length; i++) {
+        for (let j = i + 1; j <= str.length; j++) {
+            substrings.push(str.slice(i, j));
+        }
+    }
+    
+    return substrings;
+}
+
+console.log("Testing with 'abc':");
+let result1 = getAllConsecutiveSubstrings('abc');
+console.log(result1);
+
+console.log("\nTesting with 'a':");
+let result2 = getAllConsecutiveSubstrings('a');
+console.log(result2);
+
+console.log("\nTesting with empty string '':");
+let result3 = getAllConsecutiveSubstrings('');
+console.log(result3);
+
+console.log("\nTesting with 'phone':");
+let result4 = getAllConsecutiveSubstrings('phone');
+console.log("Number of substrings:", result4.length);
+console.log("First 5 substrings:", result4.slice(0, 5));
+
+console.log("\nTesting with 'ab':");
+let result5 = getAllConsecutiveSubstrings('ab');
+console.log(result5);
+EOF
